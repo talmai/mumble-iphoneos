@@ -996,7 +996,7 @@
 				LastUpgradeCheck = 0510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = CXBDCLUHDT;
+						DevelopmentTeam = EU2F3N6RGN;
 					};
 				};
 			};
@@ -1307,6 +1307,9 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EU2F3N6RGN;
+				PRODUCT_BUNDLE_IDENTIFIER = pbc.place.info.mumble.Mumble;
+				PRODUCT_NAME = "PBC Translate";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1317,6 +1320,9 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EU2F3N6RGN;
+				PRODUCT_BUNDLE_IDENTIFIER = pbc.place.info.mumble.Mumble;
+				PRODUCT_NAME = "PBC Translate";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1461,6 +1467,9 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EU2F3N6RGN;
+				PRODUCT_BUNDLE_IDENTIFIER = pbc.place.info.mumble.Mumble;
+				PRODUCT_NAME = "PBC Translate";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1478,6 +1487,9 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EU2F3N6RGN;
+				PRODUCT_BUNDLE_IDENTIFIER = pbc.place.info.mumble.Mumble;
+				PRODUCT_NAME = "PBC Translate";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

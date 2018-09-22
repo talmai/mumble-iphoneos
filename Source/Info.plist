@@ -103,7 +103,7 @@
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleBlackOpaque</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Mumble uses your microphone for voice chats</string>
+	<string>PBC Translate uses your microphone for voice chats</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

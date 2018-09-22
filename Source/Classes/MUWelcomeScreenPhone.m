@@ -41,7 +41,7 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    self.navigationItem.title = @"Mumble";
+    self.navigationItem.title = @"Back";
     self.navigationController.toolbarHidden = YES;
 
     UINavigationBar *navBar = self.navigationController.navigationBar;
@@ -97,7 +97,8 @@
     return 1;
 #endif
     if (section == 0)
-        return 3;
+        return 1;
+//        return 3;
     return 0;
 }
 
@@ -134,12 +135,14 @@
     /* Servers section. */
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            cell.textLabel.text = NSLocalizedString(@"Public Servers", nil);
-        } else if (indexPath.row == 1) {
+//            cell.textLabel.text = NSLocalizedString(@"Public Servers", nil);
             cell.textLabel.text = NSLocalizedString(@"Favourite Servers", nil);
-        } else if (indexPath.row == 2) {
-            cell.textLabel.text = NSLocalizedString(@"LAN Servers", nil);
         }
+//        } else if (indexPath.row == 1) {
+//            cell.textLabel.text = NSLocalizedString(@"Favourite Servers", nil);
+//        } else if (indexPath.row == 2) {
+//            cell.textLabel.text = NSLocalizedString(@"LAN Servers", nil);
+//        }
     }
 
     [[cell textLabel] setHidden: NO];
@@ -152,15 +155,18 @@
     /* Servers section. */
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            MUPublicServerListController *serverList = [[[MUPublicServerListController alloc] init] autorelease];
-            [self.navigationController pushViewController:serverList animated:YES];
-        } else if (indexPath.row == 1) {
+//            MUPublicServerListController *serverList = [[[MUPublicServerListController alloc] init] autorelease];
+//            [self.navigationController pushViewController:serverList animated:YES];
             MUFavouriteServerListController *favList = [[[MUFavouriteServerListController alloc] init] autorelease];
             [self.navigationController pushViewController:favList animated:YES];
-        } else if (indexPath.row == 2) {
-            MULanServerListController *lanList = [[[MULanServerListController alloc] init] autorelease];
-            [self.navigationController pushViewController:lanList animated:YES];
         }
+//        } else if (indexPath.row == 1) {
+//            MUFavouriteServerListController *favList = [[[MUFavouriteServerListController alloc] init] autorelease];
+//            [self.navigationController pushViewController:favList animated:YES];
+//        } else if (indexPath.row == 2) {
+//            MULanServerListController *lanList = [[[MULanServerListController alloc] init] autorelease];
+//            [self.navigationController pushViewController:lanList animated:YES];
+//        }
     }
 }
 
@@ -194,7 +200,7 @@
 
 - (void) alertView:(UIAlertView *)alert didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.mumbleapp.com/"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pbc.place/"]];
     } else if (buttonIndex == 2) {
         MULegalViewController *legalView = [[MULegalViewController alloc] init];
         UINavigationController *navController = [[UINavigationController alloc] init];
@@ -203,7 +209,7 @@
         [[self navigationController] presentModalViewController:navController animated:YES];
         [navController release];
     } else if (buttonIndex == 3) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:support@mumbleapp.com"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:decom@pbc.place"]];
     }
 }
 
