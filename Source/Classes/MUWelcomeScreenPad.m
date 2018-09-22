@@ -82,7 +82,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    self.navigationItem.title = @"Mumble";
+    self.navigationItem.title = @"Back";
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     
@@ -107,7 +107,8 @@
 // Customize the number of rows in the table view.
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0)
-        return 3;
+        return 1;
+//        return 3;
     return 0;
 }
 
@@ -127,12 +128,14 @@
     /* Servers section. */
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            cell.textLabel.text = NSLocalizedString(@"Public Servers", nil);
-        } else if (indexPath.row == 1) {
-            cell.textLabel.text = NSLocalizedString(@"Favourite Servers", nil);
-        } else if (indexPath.row == 2) {
-            cell.textLabel.text = NSLocalizedString(@"LAN Servers", nil);
+//            cell.textLabel.text = NSLocalizedString(@"Public Servers", nil);
+            cell.textLabel.text = @"Start Translation";
         }
+//        } else if (indexPath.row == 1) {
+//            cell.textLabel.text = NSLocalizedString(@"Favourite Servers", nil);
+//        } else if (indexPath.row == 2) {
+//            cell.textLabel.text = NSLocalizedString(@"LAN Servers", nil);
+//        }
     }
     
     [[cell textLabel] setHidden: NO];
@@ -145,15 +148,18 @@
     /* Servers section. */
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            MUPublicServerListController *serverList = [[[MUPublicServerListController alloc] init] autorelease];
-            [self.navigationController pushViewController:serverList animated:YES];
-        } else if (indexPath.row == 1) {
+//            MUPublicServerListController *serverList = [[[MUPublicServerListController alloc] init] autorelease];
+//            [self.navigationController pushViewController:serverList animated:YES];
             MUFavouriteServerListController *favList = [[[MUFavouriteServerListController alloc] init] autorelease];
             [self.navigationController pushViewController:favList animated:YES];
-        } else if (indexPath.row == 2) {
-            MULanServerListController *lanList = [[[MULanServerListController alloc] init] autorelease];
-            [self.navigationController pushViewController:lanList animated:YES];
         }
+//        } else if (indexPath.row == 1) {
+//            MUFavouriteServerListController *favList = [[[MUFavouriteServerListController alloc] init] autorelease];
+//            [self.navigationController pushViewController:favList animated:YES];
+//        } else if (indexPath.row == 2) {
+//            MULanServerListController *lanList = [[[MULanServerListController alloc] init] autorelease];
+//            [self.navigationController pushViewController:lanList animated:YES];
+//        }
     }
 }
 

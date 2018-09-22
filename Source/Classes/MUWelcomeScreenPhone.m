@@ -136,7 +136,7 @@
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
 //            cell.textLabel.text = NSLocalizedString(@"Public Servers", nil);
-            cell.textLabel.text = NSLocalizedString(@"Favourite Servers", nil);
+            cell.textLabel.text = @"Start Translation";
         }
 //        } else if (indexPath.row == 1) {
 //            cell.textLabel.text = NSLocalizedString(@"Favourite Servers", nil);
