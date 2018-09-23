@@ -54,7 +54,8 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    [[self navigationItem] setTitle:NSLocalizedString(@"Favourite Servers", nil)];
+//    [[self navigationItem] setTitle:NSLocalizedString(@"Favourite Servers", nil)];
+    [[self navigationItem] setTitle:@"Translation Servers"];
     
     UINavigationBar *navBar = self.navigationController.navigationBar;
     if (MUGetOperatingSystemVersion() >= MUMBLE_OS_IOS_7) {
