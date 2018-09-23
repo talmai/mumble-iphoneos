@@ -84,7 +84,7 @@ static FMDatabase *db = nil;
                       @" `username` TEXT,"
                       @" `password` TEXT)"];
 
-    [db executeUpdate:@"INSERT INTO `favourites` (`name`, `hostname`, `port`, `username`, `password`) VALUES ('PBC.PLACE', 'beta.pbc.place', 64738, 'guest_' || lower(hex(randomblob(4))), 'pbc')"];
+    [db executeUpdate:@"INSERT INTO `favourites` (`name`, `hostname`, `port`, `username`, `password`) SELECT 'PBC.PLACE', 'beta.pbc.place', 64738, 'guest_' || lower(hex(randomblob(4))), 'pbc' where NOT exists(select 1 from 'favourites' where hostname = 'beta.pbc.place')"];
 
     [db executeUpdate:@"CREATE TABLE IF NOT EXISTS `cert` "
                       @"(`id` INTEGER PRIMARY KEY AUTOINCREMENT,"
